@@ -1,4 +1,7 @@
-import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
+import {Component, CORE_DIRECTIVES, Inject} from 'angular2/angular2';
+import {Router, RouteParams} from 'angular2/router';
+
+
 import {AuthServices} from './auth.service';
 
 @Component({
@@ -10,11 +13,15 @@ import {AuthServices} from './auth.service';
 })
 export class AuthPage {
 
-  constructor(public auth_services:AuthServices) {
+  constructor(private auth_services:AuthServices, private router:Router) {
 
   }
 
-  login(event, email, password):void {
+  login(email, password):void {
     var token:string = this.auth_services.getToken(email, password);
+    localStorage.setItem("auth_token", token);
+    console.log('storage saved')
+    this.router.navigate(['Dashboard.home']);
   }
+
 }

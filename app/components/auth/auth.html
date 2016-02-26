@@ -6,7 +6,7 @@
           <h3 class="panel-title">Please Sign In</h3>
         </div>
         <div class="panel-body">
-          <form role="form" (submit)="login($event, email.value, password.value)" novalidate>
+          <form role="form" (submit)="login(email.value, password.value)" method="post" novalidate>
             <fieldset>
               <div class="form-group">
                 <input class="form-control" #email placeholder="E-mail" name="email" type="email" autofocus>
