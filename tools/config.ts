@@ -70,23 +70,44 @@ export const PATH = {
       `${APP_SRC}/css/main.css`,
       `${APP_SRC}/css/main-rtl.css`,
       `${APP_SRC}/css/sb-admin-2.css`,
-      `${APP_SRC}/css/sb-admin-2-rtl.css`
+      `${APP_SRC}/css/sb-admin-2-rtl.css`,
+      `${APP_SRC}/css/font.css`,
     ],
     assets: [
       `${APP_SRC}/assets/**/*`
     ],
     fonts: [
+
       resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.eot'),
       resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.svg'),
       resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.ttf'),
       resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.woff'),
       resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'),
+
       resolve('font-awesome/fonts/FontAwesome.otf'),
       resolve('font-awesome/fonts/fontawesome-webfont.eot'),
       resolve('font-awesome/fonts/fontawesome-webfont.svg'),
       resolve('font-awesome/fonts/fontawesome-webfont.ttf'),
       resolve('font-awesome/fonts/fontawesome-webfont.woff'),
-      resolve('font-awesome/fonts/fontawesome-webfont.woff2')
+      resolve('font-awesome/fonts/fontawesome-webfont.woff2'),
+
+      `${APP_SRC}/fonts/IRANSANSExpanded.eot`,
+      `${APP_SRC}/fonts/IRANSANSExpanded.woff`,
+      `${APP_SRC}/fonts/IRANSANSExpanded.woff2`,
+
+      `${APP_SRC}/fonts/IRANSans-Light-Expanded.woff`,
+      `${APP_SRC}/fonts/IRANSans-Light-Expanded.woff2`,
+
+      `${APP_SRC}/fonts/IRANSans-UltraLight.woff`,
+      `${APP_SRC}/fonts/IRANSans-UltraLight.woff2`,
+
+      `${APP_SRC}/fonts/IRANSans-Black.eot`,
+      `${APP_SRC}/fonts/IRANSans-Black.woff`,
+      `${APP_SRC}/fonts/IRANSans-Black.woff2`,
+
+      `${APP_SRC}/fonts/IRANSans-Bold.eot`,
+      `${APP_SRC}/fonts/IRANSans-Bold.woff`,
+      `${APP_SRC}/fonts/IRANSans-Bold.woff2`,
     ]
   }
 };

@@ -14,18 +14,9 @@ export class HeaderNotification {
 }
 
 @Component({
-  selector: 'sidebar-search',
-  templateUrl: './components/header/sidebar-search.html',
-  directives: []
-})
-export class SidebarSearch {
-
-}
-
-@Component({
   selector: 'sidebar',
   templateUrl: './components/header/sidebar.html',
-  directives: [ROUTER_DIRECTIVES, SidebarSearch, Accordion, AccordionGroup, AccordionHeading]
+  directives: [ROUTER_DIRECTIVES, Accordion, AccordionGroup, AccordionHeading]
 })
 export class Sidebar {
 }

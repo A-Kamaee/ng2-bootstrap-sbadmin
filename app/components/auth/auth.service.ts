@@ -17,7 +17,6 @@ export class AuthServices {
         }
       }
     }
-
-    return null;
+    throw new Error("نام کاربری و رمزعبور یافت نشد!");
   }
 }
