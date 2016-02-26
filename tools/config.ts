@@ -64,10 +64,13 @@ export const PATH = {
     ],
     csslib: [
       resolve('bootstrap/dist/css/bootstrap.css'),
+      `${APP_SRC}/css/rtl-version.css`,
       resolve('bootstrap/dist/css/bootstrap.css.map'),
       resolve('font-awesome/css/font-awesome.min.css'),
       `${APP_SRC}/css/main.css`,
-      `${APP_SRC}/css/sb-admin-2.css`
+      `${APP_SRC}/css/main-rtl.css`,
+      `${APP_SRC}/css/sb-admin-2.css`,
+      `${APP_SRC}/css/sb-admin-2-rtl.css`
     ],
     assets: [
       `${APP_SRC}/assets/**/*`

@@ -1,0 +1,7 @@
+.header,.marketing,.footer{padding-right:15px;padding-left:15px;}
+.arrow{float:left;}
+.plus-times{float:left;}
+.plus-minus{float:left;}
+@media screen and (min-width:768px) {
+  .header,.marketing,.footer{padding-right:0;padding-left:0;}
+}
