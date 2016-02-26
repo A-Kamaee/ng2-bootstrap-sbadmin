@@ -15,8 +15,6 @@ export class AuthPage {
   }
 
   login(event, email, password):void {
-    console.log('login called');
     var token:string = this.auth_services.getToken(email, password);
-    console.log('token is ', token);
   }
 }
