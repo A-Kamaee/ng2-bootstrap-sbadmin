@@ -9,10 +9,9 @@
         </div>
         <div class="panel-body">
           <form class="form-login" method="post" (submit)="login(username.value, password.value)" novalidate>
-            <div class="errorHandler alert alert-danger no-display" *ng-if="showError">
-              <i class="fa fa-remove-sign">
-                نام کاربری و رمزعبور صحیح نمی باشد، لطفا نام کاربری و رمزعبور خود را بررسی نموده و دوباره امتحان کنید.
-              </i>
+            <div class="errorHandler alert alert-danger no-display alert-dismissible" *ng-if="showError">
+              نام کاربری و رمزعبور صحیح نمی باشد، لطفا نام کاربری و رمزعبور خود را بررسی نموده و دوباره امتحان کنید.
+              <br/>
             </div>
             <fieldset>
               <div class="form-group">
@@ -30,20 +29,23 @@
                     <i class="fa fa-lock"></i>
                   </span>
                 </div>
-                <a class="forgot" href="#" (click)="forgetPassword($event)">
-                  رمزعبور خود را فراموش کرده ام.
-                </a>
               </div>
               <div class="form-actions">
                 <button type="submit" class="btn btn-bricky pull-left">
                   ورود
                   <i class="fa fa-arrow-circle-right"></i>
+                  <br/>
                 </button>
               </div>
             </fieldset>
           </form>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <img src="/assets/img/logo.png" style="width: 100%" class="img-rounded"/>
     </div>
   </div>
 </div>

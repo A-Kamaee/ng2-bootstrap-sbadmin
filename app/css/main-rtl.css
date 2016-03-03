@@ -5,7 +5,13 @@
 @media screen and (min-width:768px) {
   .header,.marketing,.footer{padding-right:0;padding-left:0;}
 }
-.input-group
+
+.navbar-header
 {
-  direction: ltr;
+  float: right;
+}
+
+.navbar-right
+{
+  float: left !important;
 }

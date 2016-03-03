@@ -5,7 +5,7 @@ body {
 	direction: rtl;
 }
 .list-unstyled {
-	
+
     padding-right: 0;
 }
 /* ---------------------------------------------------------------------- */
@@ -591,7 +591,7 @@ body.rtl .invoice .invoice-block {
 	body.rtl.page-full-width .navbar-nav > li {
     	display: inline-block !important;
     	float: none !important;
-	}	
+	}
 	body.rtl .navbar > .container > .navbar-header {
 		float: right !important;
 	}

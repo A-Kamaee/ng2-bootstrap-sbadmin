@@ -47,6 +47,7 @@ export const PATH = {
       resolve('reflect-metadata/Reflect.js'),
       resolve('reflect-metadata/Reflect.js.map'),
       resolve('systemjs/dist/system.src.js'),
+      resolve('bootstrap/dist/js/bootstrap.js'),
       `${APP_SRC}/system.config.js`,
       `${ANGULAR_BUNDLES}/angular2.dev.js`,
       `${ANGULAR_BUNDLES}/router.dev.js`,

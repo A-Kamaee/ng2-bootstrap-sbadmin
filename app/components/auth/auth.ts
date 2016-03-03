@@ -30,9 +30,4 @@ export class AuthPage {
     }
   }
 
-  forgetPassword(event) {
-    event.preventDefault();
-    console.log('forgetPassword clicked by the way.');
-  }
-
 }

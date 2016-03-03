@@ -1,0 +1,18 @@
+<wrapper>
+  <div class="row">
+    <div class="col-md-12 col-md-offset-2">
+      <div class="well-lg">
+        <ul class="list-group">
+          <li *ng-for="#term of _terms" class="list-group-item">
+            <a [router-link]="['Term.index', {'term': term}]" href="#">
+              ترم
+              &nbsp;
+              {{term}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</wrapper>

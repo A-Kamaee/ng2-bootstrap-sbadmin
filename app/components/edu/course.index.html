@@ -1,0 +1,290 @@
+<wrapper>
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="inline">
+            <span class="span12">
+                {{course.title}}
+                <span class="small">
+                    ({{course.code}})
+                </span>
+            </span>
+      </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      زمان برگزاری:
+      &nbsp;
+      {{course.time}}
+    </div>
+    <div class="col-md-3">
+      مکان برگزاری:
+      &nbsp;
+      {{course.class}}
+    </div>
+    <div class="col-md-2">
+      ترم:
+      &nbsp;
+      {{course.semester}}
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-reorder"></i>
+          سرفصل مطالب
+        </div>
+        <div class="panel-body">
+          <ul *ng-for="#topic of course.topics">
+            <li>
+              {{topic.title}}
+            </li>
+            <ul>
+              <li *ng-for="#subject of topic.subjects">
+                {{subject.title}}
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-reorder"></i>
+          بارم بندی
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover table-full-width">
+            <tr>
+              <th>
+                عنوان
+              </th>
+              <th>
+                میزان تاثیر در نمره کل
+              </th>
+            </tr>
+            <tr *ng-for="#score of course.scores">
+              <td class="text-center">
+                {{score.title}}
+              </td>
+              <td class="text-center">
+                {{score.percent}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-reorder"></i>
+          منابع درس
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover table-full-width">
+            <tr>
+              <th>
+                عنوان
+              </th>
+              <th>
+                توضیحات
+              </th>
+            </tr>
+            <tr *ng-for="#resource of course.resources">
+              <td>
+                <a href="{{resource.link}}">
+                  {{resource.title}}
+                </a>
+              </td>
+              <td>
+                {{resource.description}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-reorder"></i>
+          امتحانات
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover">
+            <tr>
+              <th>
+                عنوان
+              </th>
+              <th>
+                تاریخ
+              </th>
+              <th>
+                نوع امتحان
+              </th>
+            </tr>
+            <tr *ng-for="#exam of course.exams" class="text-center">
+              <td>
+                {{ exam.title}}
+              </td>
+              <td>
+                {{ exam.datetime }}
+              </td>
+              <td>
+                {{ exam.type }}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <i class="fa fa-reorder"></i>
+          تمرین و پروژه
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover">
+            <tr>
+              <th>
+                عنوان
+              </th>
+              <th>
+                نوع
+              </th>
+              <th>
+                زمان آغاز
+              </th>
+              <th>
+                سررسید اولیه
+              </th>
+              <th>
+                سررسید نهایی
+              </th>
+              <th>
+                سند توصیف
+              </th>
+              <th>
+                عملیات
+              </th>
+            </tr>
+            <tr *ng-for="#assignment of course.assignments" class="text-center">
+              <td>
+                {{assignment.title}}
+              </td>
+              <td>
+                {{assignment.type}}
+              </td>
+              <td>
+                {{assignment.startDate}}
+              </td>
+              <td>
+                {{assignment.softDeadLine}}
+              </td>
+              <td>
+                {{assignment.hardDeadLine}}
+              </td>
+              <td>
+                <a href="{{assignment.descriptionUrl}}">
+                  سند توصیف پروژه
+                </a>
+
+              </td>
+              <td>
+                <a href="#">
+                  بارگزاری پاسخ
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-reorder"></i>
+          دست اندرکاران
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="thumbnail thumbnail-borderless">
+                <img class="circle-img" src="{{course.professor.imageUrl}}"/>
+                <h5 class="text-center">
+                  <a href="#">
+                    {{course.professor.name}}
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <a href="mailto: {{course.director.email}}">
+                    ({{course.professor.email}})
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <i>
+                    استاد
+                  </i>
+                </h5>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail thumbnail-borderless">
+                <img class="circle-img" src="{{course.director.imageUrl}}"/>
+                <h5 class="text-center">
+                  <a href="#">
+                    {{course.director.name}}
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <a href="mailto: {{course.director.email}}">
+                    ({{course.director.email}})
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <i>
+                    دستیار آموزشی اصلی
+                  </i>
+                </h5>
+              </div>
+            </div>
+            <div class="col-md-3" *ng-for="#assistant of course.assistants">
+              <div class="thumbnail thumbnail-borderless">
+                <img class="circle-img" src="{{assistant.imageUrl}}"/>
+                <h5 class="text-center">
+                  <a href="#">
+                    {{assistant.name}}
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <a href="mailto: {{course.director.email}}">
+                    ({{assistant.email}})
+                  </a>
+                </h5>
+                <h5 class="text-center">
+                  <i>
+                    دستیار آموزشی
+                  </i>
+                </h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</wrapper>

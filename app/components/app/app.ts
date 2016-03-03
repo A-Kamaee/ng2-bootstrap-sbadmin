@@ -1,9 +1,10 @@
 import {Component, ViewEncapsulation} from 'angular2/angular2';
 import {
   RouteConfig,
-  ROUTER_DIRECTIVES
+  ROUTER_DIRECTIVES,
+  RouteParams
 } from 'angular2/router';
-// import {HTTP_PROVIDERS} from 'http/http';
+
 
 import {HomePage} from '../home/home';
 import {FormPage} from '../form/form';
@@ -15,9 +16,12 @@ import {NotificationsPage} from '../notifications/notifications';
 import {TypographyPage} from '../typography/typography';
 import {IconsPage} from '../icons/icons';
 import {GridPage} from '../grid/grid';
-import {Header} from '../header/header';
 import {NameList} from '../../services/name_list';
 import {PanelsWellsPage} from '../panels-wells/panels-wells';
+
+import {CourseIndex} from '../edu/course.component'
+import {TermList, TermIndex} from '../edu/term.component'
+import {CommentIndex} from '../comment/comment.component'
 
 @Component({
   selector: 'app',
@@ -28,19 +32,26 @@ import {PanelsWellsPage} from '../panels-wells/panels-wells';
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  { path: '/', redirectTo: '/home' },
-  { path: '/home', component: HomePage, as: 'Dashboard.home' },
-  { path: '/form', component: FormPage, as: 'Dashboard.form' },
-  { path: '/blank', component: HomePage, as: 'Dashboard.blank' },
-  { path: '/login', component: AuthPage, as: 'Auth' },
-  { path: '/chart', component: ChartPage, as: 'Dashboard.chart' },
-  { path: '/table', component: TablePage, as: 'Dashboard.table' },
-  { path: '/panels-wells', component: PanelsWellsPage, as: 'Dashboard.panels-wells' },
-  { path: '/buttons', component: ButtonsPage, as: 'Dashboard.buttons' },
-  { path: '/notifications', component: NotificationsPage, as: 'Dashboard.notifications' },
-  { path: '/typography', component: TypographyPage, as: 'Dashboard.typography' },
-  { path: '/icons', component: IconsPage, as: 'Dashboard.icons' },
-  { path: '/grid', component: GridPage, as: 'Dashboard.grid' }
+  {path: '/', redirectTo: '/home'},
+  {path: '/home', component: HomePage, as: 'Dashboard.home'},
+  {path: '/form', component: FormPage, as: 'Dashboard.form'},
+  {path: '/blank', component: HomePage, as: 'Dashboard.blank'},
+  {path: '/login', component: AuthPage, as: 'Auth'},
+  {path: '/chart', component: ChartPage, as: 'Dashboard.chart'},
+  {path: '/table', component: TablePage, as: 'Dashboard.table'},
+  {path: '/panels-wells', component: PanelsWellsPage, as: 'Dashboard.panels-wells'},
+  {path: '/buttons', component: ButtonsPage, as: 'Dashboard.buttons'},
+  {path: '/notifications', component: NotificationsPage, as: 'Dashboard.notifications'},
+  {path: '/typography', component: TypographyPage, as: 'Dashboard.typography'},
+  {path: '/icons', component: IconsPage, as: 'Dashboard.icons'},
+  {path: '/grid', component: GridPage, as: 'Dashboard.grid'},
+
+  {path: '/edu', component:TermList, as: 'Term.list'},
+  {path: '/edu/:term', component:TermIndex, as: 'Term.index'},
+
+  {path:'/comment', component: CommentIndex, as: 'Component.index'},
+
+  {path: '/course', component: CourseIndex, as: 'Course.index'}
 ])
 export class App {
 }

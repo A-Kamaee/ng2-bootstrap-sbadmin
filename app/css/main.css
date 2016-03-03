@@ -3,6 +3,7 @@ body {
   font-size: 13px;
   /* Space out content a bit */
   padding-bottom: 20px;
+  text-align: right;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -150,3 +151,9 @@ body {
 .active > a > .fa.plus-minus:before {
   content: "\f068";
 }
+
+th
+{
+  text-align: center;
+}
+
