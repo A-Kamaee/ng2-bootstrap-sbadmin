@@ -6,13 +6,12 @@ import {CourseService} from '../course/course.service';
 
 @Component({
   selector: 'course-index',
-  templateUrl: './components/edu/course.index.html',
-  directives: [ROUTER_DIRECTIVES, WrapperCmp],
-  providers: [CourseService]
+  templateUrl: './components/edu/course/course.index.html',
+  directives: [WrapperCmp],
 })
 export class CourseIndex {
-  constructor(private coruseService:CourseService)
+  constructor()
   {
-
+    console.log("Component Course Index called successfully ...");
   }
 }

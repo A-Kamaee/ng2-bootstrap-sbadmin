@@ -7,7 +7,7 @@ import {WrapperCmp} from '../../header/header';
 
 @Component({
   selector: 'term-list',
-  templateUrl: './components/edu/term.list.html',
+  templateUrl: './components/edu/course/term.list.html',
   providers: [TermService],
   directives: [NgFor, RouterLink, WrapperCmp]
 })
@@ -23,7 +23,7 @@ export class TermList
 
 @Component({
   selector: 'term-index',
-  templateUrl: './components/edu/term.index.html'
+  templateUrl: './components/edu/course/term.index.html'
 })
 export class TermIndex
 {
