@@ -16,7 +16,8 @@ export class CommentIndex {
 
   constructor()
   {
-    this._comment = CommentManager.GetInstance().getComment("sdfdsafsaf", new User("lsjfalsfjd", new Date(), "lksjsddjslsdkdfj", "ldkfjsfdjsldfjk", "lfjsljfsdflkj"));
-    console.log('comment inside CommentIndex is ', this._comment);
+    //console.log("Index page load started");
+    //this._comment = CommentManager.GetInstance().getComment("sdfdsafsaf", new User("lsjfalsfjd", new Date(), "lksjsddjslsdkdfj", "ldkfjsfdjsldfjk", "lfjsljfsdflkj"));
+    //console.log('comment inside CommentIndex is ', this._comment);
   }
 }

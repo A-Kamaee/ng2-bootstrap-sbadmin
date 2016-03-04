@@ -42,7 +42,7 @@ export class CommentManager
   // تمام نظرات مربوط به یک مقدار نظردادنی را باز می گرداند
   public getComments(commentableId:string): Comment[]
   {
-    throw new Error('Not Implemented so far ...')
+    return this._commentCatalog.getComments("sdfdalfj");
   }
 
   public getComment(commentableId:string, user:User):Comment
