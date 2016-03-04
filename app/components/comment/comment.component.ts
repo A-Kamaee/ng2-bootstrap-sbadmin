@@ -1,6 +1,8 @@
 import {Component} from 'angular2/angular2';
 import {WrapperCmp} from '../header/header';
 import {Comment} from "./comment.model";
+import {CommentManager} from "./commentManager.helper";
+import {User} from '../auth/user.model'
 
 
 @Component({
@@ -12,7 +14,9 @@ export class CommentIndex {
 
   private _comment:Comment;
 
-  constructor(){
-    this._comment = new Comment();
+  constructor()
+  {
+    this._comment = CommentManager.GetInstance().getComment("sdfdsafsaf", new User("lsjfalsfjd", new Date(), "lksjsddjslsdkdfj", "ldkfjsfdjsldfjk", "lfjsljfsdflkj"));
+    console.log('comment inside CommentIndex is ', this._comment);
   }
 }

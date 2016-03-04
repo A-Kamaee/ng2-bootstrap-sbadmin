@@ -3,7 +3,7 @@ import {RouteParams, RouterLink} from 'angular2/router'
 import {NgFor} from 'angular2/angular2'
 
 import {TermService} from './term.service'
-import {WrapperCmp} from '../header/header';
+import {WrapperCmp} from '../../header/header';
 
 @Component({
   selector: 'term-list',

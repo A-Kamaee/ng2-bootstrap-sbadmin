@@ -1,10 +1,10 @@
-import {IRateAndCommentable} from "./iRatableAndCommentable.model";
-import {User} from "../auth/user.model";
-import {IRateAndCommentable} from "./iRatableAndCommentable.model";
+import {IRateAndCommentable} from './iRatableAndCommentable.model';
+import {User} from '../auth/user.model';
+
 export class Comment {
-  get creator():User{
-      return this._creator;
-      }
+  get creator():User {
+    return this._creator;
+  }
 
   get rateAndCommentable():IRateAndCommentable {
     return this._rateAndCommentable;

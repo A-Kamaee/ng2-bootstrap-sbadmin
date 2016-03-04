@@ -13,7 +13,9 @@ export class CourseService {
       "professor": {
         "name": "سبحان فروغی",
         "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
-        "email": "sobhanforoughi@gmail.com"
+        "email": "sobhanforoughi@gmail.com",
+        "password": "lksdjlsjf",
+        "birthday": new Date(1224043200000)
       },
       "resources": [
         {
@@ -30,86 +32,90 @@ export class CourseService {
       "director": {
         "name": "مجتبی ورمزیار",
         "email": "mahmoud1468@gmail.com",
-        "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg"
+        "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
+        "password": "lsjflaskjflasjf",
+        "birthday": new Date(1224043200000),
       },
       "assistants": [
         {
           "name": "Mohammad Asghari",
           "email": "mhm.asghari@gmail.com",
-          "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg"
+          "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
+          "password": "lkjlkdjfadf",
+          "birthday": new Date(1224043200000),
         }
       ],
       "semester": "۹۵-۹۴",
       "time": "شنبه ها و دوشنبه ها ساعت ۷:۳۰ تا ۹:۰۰",
       "class": "دانشکده کامپیوتر ۷۲۴",
-      "scores": [
-        {
-          "title": "میان ترم اول",
-          "percent": "15%",
-        },
-        {
-          "title": "میان ترم دوم",
-          "percent": "15%",
-        },
-        {
-          "title": "پایان ترم",
-          "percent": "20%"
-        },
-        {
-          "title": "پروژه عملی",
-          "percent": "50%"
-        },
-        {
-          "title": "حضور در کلاس",
-          "percent": "0%"
-        }
-      ],
       "topics": [
         {
           "title": "Introducing UML and UP",
-          "subjects": [
+          "children": [
             {
-              "title": "What is UML"
+              "title": "What is UML",
+              "children": [],
+              "parent": null,
             },
             {
-              "title": "What is Unified Process"
+              "title": "What is Unified Process",
+              "children": [],
+              "parent": null,
             }
-          ]
+          ],
+          "parent": null
         },
         {
           "title": "Requirement",
-          "subjects": [
+          "children": [
             {
-              "title": "The requirement workflow"
+              "title": "The requirement workflow",
+              "children": [],
+              "parent": null,
             },
             {
               "title": "Use case modeling",
+              "children": [],
+              "parent": null,
             },
             {
               "title": "Advance use case modeling",
+              "children": [],
+              "parent": null,
             },
-          ]
+          ],
+          "parent": null,
         },
         {
           "title": "Analyze",
-          "subjects": [
+          "children": [
             {
               "title": "The analysis workflow",
+              "children": [],
+              "parent": null,
             },
             {
               "title": "Object and classes",
+              "children": [],
+              "parent": null,
             },
             {
-              "title": "Finding analysis class"
+              "title": "Finding analysis class",
+              "children": [],
+              "parent": null,
             },
             {
-              "title": "Relationship"
+              "title": "Relationship",
+              "children": [],
+              "parent": null,
             },
             {
-              "title": "Inheritance and polymorphism"
+              "title": "Inheritance and polymorphism",
+              "children": [],
+              "parent": null,
             },
-
-          ]
+          ],
+          "parent": null
         }
       ],
       "exams": [
@@ -158,7 +164,9 @@ export class CourseService {
       "professor": {
         "name": "دکتر رامسین",
         "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
-        "email": "sobhanforoughi@gmail.com"
+        "email": "sobhanforoughi@gmail.com",
+        "password": "easy password",
+        "birthday": new Date(1224043200000)
       },
       "resources": [
         {
@@ -170,65 +178,59 @@ export class CourseService {
       "director": {
         "name": "علی علوی",
         "email": "mahmoud1468@gmail.com",
-        "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg"
+        "password": "strong password",
+        "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
+        "birthday": new Date(1224043200000)
       },
       "assistants": [
         {
           "name": "Mohammad Asghari",
           "email": "mhm.asghari@gmail.com",
-          "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg"
+          "password": "my password",
+          "imageUrl": "/src/app/components/assets/images/avatar-1-big.jpg",
+          "birthday": new Date(1224043200000)
         }
       ],
       "semester": "۹۵-۹۴",
       "time": "شنبه ها و دوشنبه ها ساعت ۷:۳۰ تا ۹:۰۰",
       "class": "دانشکده کامپیوتر ۷۲۴",
-      "scores": [
-        {
-          "title": "میان ترم اول",
-          "percent": "15%",
-        },
-        {
-          "title": "میان ترم دوم",
-          "percent": "15%",
-        },
-        {
-          "title": "پایان ترم",
-          "percent": "20%"
-        },
-        {
-          "title": "پروژه عملی",
-          "percent": "50%"
-        },
-        {
-          "title": "حضور در کلاس",
-          "percent": "10%"
-        }
-      ],
       "topics": [
         {
           "title": "Introducing UML and UP",
-          "subjects": [
+          "children": [
             {
-              "title": "What is UML"
+              "title": "What is UML",
+              "children": [],
+              "parent": null,
             },
             {
-              "title": "What is Unified Process"
+              "title": "What is Unified Process",
+              "children": [],
+              "parent": null,
             }
-          ]
+          ],
+          "parent": null,
         },
         {
           "title": "Requirement",
-          "subjects": [
+          "children": [
             {
-              "title": "The requirement workflow"
+              "title": "The requirement workflow",
+              "children": [],
+              "parent": null,
             },
             {
               "title": "Use case modeling",
+              "children": [],
+              "parent": null,
             },
             {
               "title": "Advance use case modeling",
+              "children": [],
+              "parent": null,
             },
-          ]
+          ],
+          "parent": null,
         }
       ],
       "exams": [
@@ -257,23 +259,18 @@ export class CourseService {
 
   findCourseById(id:string):Course {
 
-    try
-    {
-      for(var i in this._courses)
-      {
+    try {
+      for (var i in this._courses) {
         var course:Course = this._courses[i];
-        if(course._id == id)
-        {
+        if (course._id == id) {
           return course;
         }
       }
     }
-    catch(e)
-    {
+    catch (e) {
       throw new Error(` هنگام دریافت اطلاعات درس ${id} خطای نامشخص رخ داده است.`)
     }
     return null;
-
   }
 
 }

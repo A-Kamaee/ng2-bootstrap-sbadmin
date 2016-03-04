@@ -19,8 +19,8 @@ import {GridPage} from '../grid/grid';
 import {NameList} from '../../services/name_list';
 import {PanelsWellsPage} from '../panels-wells/panels-wells';
 
-import {CourseIndex} from '../edu/course.component'
-import {TermList, TermIndex} from '../edu/term.component'
+import {CourseIndex} from '../edu/course/course.component'
+import {TermList, TermIndex} from '../edu/course/term.component'
 import {CommentIndex} from '../comment/comment.component'
 
 @Component({
