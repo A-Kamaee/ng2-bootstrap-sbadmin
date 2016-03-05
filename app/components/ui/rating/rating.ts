@@ -17,7 +17,7 @@ import {Component, View, NgFor, NgClass, EventEmitter} from 'angular2/angular2';
 export class Rating {
   private range:Array<number> = [1,2,3,4,5];
   private rate:number;
-  private updateRate:EventEmitter = new EventEmitter();
+  private updateRate:EventEmitter<any> = new EventEmitter();
 
   update(value) {
     this.rate = value;

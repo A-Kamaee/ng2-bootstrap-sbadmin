@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
       <h2 class="page-header">نظرات</h2>
       <section class="comment-list">
         <article *ng-for="#comment of comments" class="row">
@@ -14,26 +14,33 @@
           <div class="col-md-9">
             <div class="panel panel-default arrow right">
               <div class="panel-body">
-                <header class="text-right">
-                  <time class="comment-date"><i class="fa fa-clock-o"></i>
-                    <small>
-                      {{comment.recordDatetime}}
-                    </small>
-                  </time>
-                </header>
-                <div class="comment-post">
-                  <p>
+                <div class="row">
+                  <div class='col-md-8 text-right'>
+                    <time class="comment-date"><i class="fa fa-clock-o"></i>
+                      <small>
+                        {{comment.recordDatetime | jDate}}
+                      </small>
+                    </time>
+                  </div>
+                  <div class="col-md-4 text-left">
                     <rating [rate]="comment.rate"></rating>
-                  </p>
-                  <p>
-                    {{comment.content}}
-                  </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="comment-post">
+                      <p>
+                        {{comment.content}}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </article>
-      </section>
     </div>
+    </article>
+    </section>
   </div>
+</div>
 </div>

@@ -53,6 +53,7 @@ export const PATH = {
       `${ANGULAR_BUNDLES}/angular2.dev.js`,
       `${ANGULAR_BUNDLES}/router.dev.js`,
       `${ANGULAR_BUNDLES}/http.dev.js`,
+
       // TODO: Find a better way to register injectables resource not copied
       // Another way is to add `registerInjectableAssetsRef(['ng2-bootstrap.js'], PATH.dest.dev.lib);` to gulpfile
       'ng2-bootstrap.js'
@@ -60,10 +61,6 @@ export const PATH = {
     jslib_copy_only: [
       resolve('systemjs/dist/system-polyfills.js'),
       resolve('systemjs/dist/system-polyfills.js.map'),
-      resolve('jalali-date/build/jdate.js'),
-      // './node_modules/ng2-bootstrap/**/*.js',
-      // './node_modules/ng2-bootstrap/**/*.js.map',
-      // '!./node_modules/ng2-bootstrap/node_modules/**/*'
     ],
     csslib: [
       resolve('bootstrap/dist/css/bootstrap.css'),

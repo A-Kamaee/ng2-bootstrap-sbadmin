@@ -1,13 +1,16 @@
 import {Pipe, PipeTransform} from 'angular2/core'
 
+import {JDate} from './jdate'
+
 @Pipe({
   name: 'jDate'
 })
 export class JalaliDatePipe implements PipeTransform {
 
-  public transform(value:number, args:string[])
+  public transform(value:Date, args:string[])
   {
-    return Math.pow(value, parseInt(args[0] || '1', 10));
+    var jdate:JDate = new JDate(value);
+    return jdate.format('dddd DD MMMM YYYY');
   }
 
 }
