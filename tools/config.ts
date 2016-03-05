@@ -5,27 +5,27 @@ let resolve = require.resolve;
 
 // --------------
 // Configuration.
-export const ENV              = argv['env']         || 'dev';
-export const DEBUG            = argv['debug']       || false;
+export const ENV = argv['env'] || 'dev';
+export const DEBUG = argv['debug'] || false;
 
-export const PORT             = argv['port']        || 5555;
+export const PORT = argv['port'] || 5555;
 export const LIVE_RELOAD_PORT = argv['reload-port'] || 4002;
-export const DOCS_PORT        = argv['docs-port']   || 4003;
-export const APP_BASE         = argv['base']        || '/';
+export const DOCS_PORT = argv['docs-port'] || 4003;
+export const APP_BASE = argv['base'] || '/';
 
-export const APP_SRC          = 'app';
-export const APP_DEST         = 'dist';
-export const APP_DOCS         = 'docs';
-export const ANGULAR_BUNDLES  = './node_modules/angular2/bundles';
-export const VERSION          = version();
+export const APP_SRC = 'app';
+export const APP_DEST = 'dist';
+export const APP_DOCS = 'docs';
+export const ANGULAR_BUNDLES = './node_modules/angular2/bundles';
+export const VERSION = version();
 
-export const VERSION_NPM      = '3.0.0';
-export const VERSION_NODE     = '4.0.0';
+export const VERSION_NPM = '3.0.0';
+export const VERSION_NODE = '4.0.0';
 
 export const PATH = {
   cwd: process.cwd(),
   tools: 'tools',
-  docs :`${APP_DEST}/${APP_DOCS}`,
+  docs: `${APP_DEST}/${APP_DOCS}`,
   dest: {
     all: APP_DEST,
     dev: {
@@ -59,7 +59,8 @@ export const PATH = {
     ],
     jslib_copy_only: [
       resolve('systemjs/dist/system-polyfills.js'),
-      resolve('systemjs/dist/system-polyfills.js.map')
+      resolve('systemjs/dist/system-polyfills.js.map'),
+      resolve('jalali-date/build/jdate.js'),
       // './node_modules/ng2-bootstrap/**/*.js',
       // './node_modules/ng2-bootstrap/**/*.js.map',
       // '!./node_modules/ng2-bootstrap/node_modules/**/*'
@@ -76,7 +77,7 @@ export const PATH = {
       `${APP_SRC}/css/font.css`,
     ],
     assets: [
-      `${APP_SRC}/assets/**/*`
+      `${APP_SRC}/assets/**/*`,
     ],
     fonts: [
 
@@ -117,7 +118,7 @@ export const PATH = {
 
 // --------------
 // Private.
-function version(): number|string {
+function version():number|string {
   var pkg = JSON.parse(readFileSync('package.json').toString());
   return pkg.version;
 }

@@ -1,7 +1,10 @@
 import {Response} from "./Response.model";
+
 export class BaseServices
 {
-  private _host:string;
+  public _host:string;
+
+
 
   public callService(relativeURL:string, parameters: Dictionary<string>):Response
   {

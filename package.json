@@ -81,6 +81,7 @@
     "es6-module-loader": "^0.17.8",
     "es6-shim": "^0.33.6",
     "font-awesome": "^4.4.0",
+    "jalali-date": "^0.1.5",
     "jquery": "^2.2.1",
     "ng2-bootstrap": "^0.46.0",
     "run-sequence": "^1.1.5",

@@ -1,0 +1,11 @@
+<rating [(rate)]="rate"></rating>
+
+<pre style="margin:15px 0;">Rate: <b>{{rate}}</b></pre>
+
+<rating [rate]="rate2" (rate-change)="onRate($event)"></rating>
+
+<pre style="margin:15px 0;">Custom rate: <b>{{customRate}}</b></pre>
+
+
+
+<pre style="margin:15px 0;">Custom rate: <b>{{customRate2}}</b></pre>

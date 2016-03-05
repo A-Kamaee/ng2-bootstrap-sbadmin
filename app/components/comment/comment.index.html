@@ -1,5 +1,39 @@
-<div class="row">
-  <div class="col-md-12">
-    This is comment index from templateUrl ...
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="page-header">نظرات</h2>
+      <section class="comment-list">
+        <article *ng-for="#comment of comments" class="row">
+          <div class="col-md-3">
+            <figure class="thumbnail">
+              <img class="img-responsive"
+                   src="http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg"/>
+              <figcaption class="text-center">{{comment.creator}}</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default arrow right">
+              <div class="panel-body">
+                <header class="text-right">
+                  <time class="comment-date"><i class="fa fa-clock-o"></i>
+                    <small>
+                      {{comment.recordDatetime}}
+                    </small>
+                  </time>
+                </header>
+                <div class="comment-post">
+                  <p>
+                    <rating [rate]="comment.rate"></rating>
+                  </p>
+                  <p>
+                    {{comment.content}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
   </div>
 </div>

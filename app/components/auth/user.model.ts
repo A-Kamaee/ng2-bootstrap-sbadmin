@@ -8,6 +8,11 @@ export class User {
     this.imageUrl = imageUrl;
   }
 
+  public toString():string
+  {
+    return this.name;
+  }
+
   public name:string;
   public birthday:Date;
   public email:string;
