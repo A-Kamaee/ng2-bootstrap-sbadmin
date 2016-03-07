@@ -1,8 +1,10 @@
-import {Guid} from '../utility/Guid.helper'
+import {Http} from 'angular2/http'
+
+import {Guid} from '../utility/common/Guid.helper'
 
 import {User} from '../auth/user.model';
 import {Comment} from './comment.model';
-import {IRateAndCommentable} from './iRatableAndCommentable.model';
+import {IRateAndCommentable} from './rataAndCommentable.interface.ts';
 import {CommentCatalog} from './comment.catalog'
 import {Session} from '../edu/session/session.model'
 
@@ -26,8 +28,6 @@ export class CommentManager
     return CommentManager._instance;
   }
 
-
-
   public generateIdentifier():string
   {
     return Guid.newGuid();
@@ -40,9 +40,9 @@ export class CommentManager
   }
 
   // تمام نظرات مربوط به یک مقدار نظردادنی را باز می گرداند
-  public getComments(commentableId:string): Comment[]
+  public getComments(rateAndCommentableId:string): Comment[]
   {
-    return this._commentCatalog.getComments("sdfdalfj");
+    return this._commentCatalog.getComments(rateAndCommentableId);
   }
 
   public getComment(commentableId:string, user:User):Comment

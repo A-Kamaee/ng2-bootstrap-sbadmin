@@ -75,6 +75,7 @@ export const PATH = {
     ],
     assets: [
       `${APP_SRC}/assets/**/*`,
+      `${APP_SRC}/components/comment/comment.test.json`
     ],
     fonts: [
 

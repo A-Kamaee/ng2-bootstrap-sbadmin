@@ -23,12 +23,9 @@
     "no-unreachable": true,
     "no-use-before-declare": true,
     "one-line": [true,
-      "check-open-brace",
-      "check-catch",
-      "check-else",
       "check-whitespace"
     ],
-    "quotemark": [true, "single"],
+    "quotemark": [false, "single"],
     "semicolon": true,
     "triple-equals": true,
     "variable-name": false

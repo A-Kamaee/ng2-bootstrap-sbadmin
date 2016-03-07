@@ -1,4 +1,4 @@
-import {IRateAndCommentable} from './iRatableAndCommentable.model';
+import {IRateAndCommentable} from './rataAndCommentable.interface.ts';
 import {User} from '../auth/user.model';
 
 export class Comment {

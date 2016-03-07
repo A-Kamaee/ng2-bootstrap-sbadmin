@@ -49,7 +49,7 @@ import {CommentIndex} from '../comment/comment.component'
   {path: '/edu', component:TermList, as: 'Term.list'},
   {path: '/edu/:term', component:TermIndex, as: 'Term.index'},
 
-  {path:'/comment', component: CommentIndex, as: 'Component.index'},
+  {path:'/comment/:rateAndCommentableId', component: CommentIndex, as: 'Component.index'},
 
   {path: '/course', component: CourseIndex, as: 'Course.index'}
 ])

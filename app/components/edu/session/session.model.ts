@@ -1,17 +1,31 @@
-import {IRateAndCommentable} from "../../comment/iRatableAndCommentable.model";
+import {IRateAndCommentable} from "../../comment/rataAndCommentable.interface.ts";
 
 export class Session implements IRateAndCommentable
 {
-  public getCommentableId():string
+
+  public rateAndCommentableId:string;
+
+  constructor()
   {
-    throw new Error('Not Implemented ...');
+    this.rateAndCommentableId = null;
   }
-  public setCommentableId(commentableId:string):void
+
+  public getRateAndCommentableId():string
   {
-    throw new Error('Not Implemented ...');
+    return this.rateAndCommentableId;
   }
-  public hasId():boolean
+
+  public setRateAndCommentableId(rateAndCommentableId:string):void
   {
-    throw new Error('Not Implemented ...');
+    this.rateAndCommentableId = rateAndCommentableId;
+  }
+
+  public hasRateAndCommentableId():boolean
+  {
+    if(this.rateAndCommentableId == null)
+    {
+      return false;
+    }
+    return true;
   }
 }

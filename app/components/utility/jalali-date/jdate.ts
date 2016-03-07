@@ -26,7 +26,6 @@ export class JDate {
   private _converter:DateConverter;
 
   constructor(_date?) {
-    console.log('JDate constructor caled ... ')
     this._converter = new DateConverter();
     this._d = _date || new Date;
     if (this._d instanceof Array) {

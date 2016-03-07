@@ -1,0 +1,1 @@
+//# sourceMappingURL=rataAndCommentable.interface.js.map
