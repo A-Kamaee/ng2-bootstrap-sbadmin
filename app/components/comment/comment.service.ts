@@ -1,25 +1,31 @@
-import {BaseServices} from '../baseServices/baseServices.service.ts';
-import {Comment} from "./comment.model";
-
-import {User} from '../auth/user.model'
-import {Session} from "../edu/session/session.model";
+import {Http} from 'angular2/http'
 
 import {Component} from 'angular2/core'
-import {Jsonp, Http} from 'angular2/http';
+
 import {Injectable} from 'angular2/core';
+
+import {BaseServices} from '../baseServices/baseServices.service.ts';
+
+import {Comment} from './comment.model';
+import {User} from '../auth/user.model'
+import {Session} from '../edu/session/session.model';
 
 @Injectable()
 export class CommentServices {
 
-  public constructor(private http:Http)
-  {
+  public constructor() {
+
+    //super();
+
     console.log('comment.service.ts constructor started ...');
-    console.log('http', http);
-    http.get("http://localhost:3000/comment/test").subscribe(res => {
-      console.log('inside subscribe function ...');
-      console.log(res);
-    });
+
+    //this.get("/comment/test");
+
     console.log('comment.service.ts constructor finished ...');
+  }
+
+  public temp():any {
+
   }
 
   protected insertComment(comment:Comment) {
@@ -80,11 +86,9 @@ export class CommentServices {
     var temp:Comment[] = [firstComment, secondComment, thirdComment, fourthComment, fifthComment];
     var res:Comment[] = [];
 
-    for(var index in temp)
-    {
+    for (var index in temp) {
       var comment:Comment = temp[index];
-      if(comment.rateAndCommentable.getRateAndCommentableId() == rateAndCommentableId)
-      {
+      if (comment.rateAndCommentable.getRateAndCommentableId() == rateAndCommentableId) {
         res.push(comment);
       }
     }

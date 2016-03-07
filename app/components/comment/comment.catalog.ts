@@ -9,7 +9,7 @@ export class CommentCatalog
   private _services: CommentServices;
   constructor()
   {
-    this._services = new CommentServices();
+    //this._services = new CommentServices();
     this._comments = [];
   }
 

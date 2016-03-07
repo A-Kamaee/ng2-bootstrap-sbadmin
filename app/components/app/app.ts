@@ -22,6 +22,7 @@ import {PanelsWellsPage} from '../panels-wells/panels-wells';
 import {CourseIndex} from '../edu/course/course.component'
 import {TermList, TermIndex} from '../edu/course/term.component'
 import {CommentIndex} from '../comment/comment.component'
+import {Temp} from '../temp/temp.component'
 
 @Component({
   selector: 'app',
@@ -51,7 +52,9 @@ import {CommentIndex} from '../comment/comment.component'
 
   {path:'/comment/:rateAndCommentableId', component: CommentIndex, as: 'Component.index'},
 
-  {path: '/course', component: CourseIndex, as: 'Course.index'}
+  {path: '/course', component: CourseIndex, as: 'Course.index'},
+
+  {path: '/temp', component: Temp, as: 'Temp.index'}
 ])
 export class App {
 }

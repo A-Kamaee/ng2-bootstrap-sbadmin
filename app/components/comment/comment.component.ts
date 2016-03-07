@@ -1,3 +1,4 @@
+import {Component} from 'angular2/angular2';
 import {NgFor} from 'angular2/common';
 import {AfterViewInit} from 'angular2/core';
 import {RouteParams} from 'angular2/router';
@@ -8,14 +9,13 @@ import {WrapperCmp} from '../header/header';
 import {JalaliDatePipe} from '../utility/jalali-date/jalali-date.pipe'
 import {PersianNumberPipe} from '../utility/persian-number/persianNumber.pipe';
 
-import {Component} from 'angular2/angular2';
+
 import {Comment} from './comment.model';
 import {CommentManager} from './commentManager.helper';
 import {CommentServices} from './comment.service'
 import {User} from '../auth/user.model';
 
 import {Rating} from '../ui/rating/rating';
-import {CommentServices} from "./comment.service";
 
 @Component({
   selector: 'comment-index',
