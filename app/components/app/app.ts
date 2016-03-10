@@ -19,10 +19,13 @@ import {GridPage} from '../grid/grid';
 import {NameList} from '../../services/name_list';
 import {PanelsWellsPage} from '../panels-wells/panels-wells';
 
-import {CourseIndex} from '../edu/course/course.component'
-import {TermList, TermIndex} from '../edu/course/term.component'
-import {CommentIndex} from '../comment/comment.component'
-import {Temp} from '../temp/temp.component'
+import {CourseIndex} from '../edu/course/course.component';
+import {TermList, TermIndex} from '../edu/course/term.component';
+import {CommentIndex} from '../comment/comment.component';
+import {Temp} from '../temp/temp.component';
+import {TodoIndex} from '../todo/todo.component';
+import {TodoList} from '../todo/todo.component2';
+import {InitComponent} from '../init/init.component';
 
 @Component({
   selector: 'app',
@@ -33,6 +36,7 @@ import {Temp} from '../temp/temp.component'
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
+
   {path: '/', redirectTo: '/home'},
   {path: '/home', component: HomePage, as: 'Dashboard.home'},
   {path: '/form', component: FormPage, as: 'Dashboard.form'},
@@ -47,14 +51,20 @@ import {Temp} from '../temp/temp.component'
   {path: '/icons', component: IconsPage, as: 'Dashboard.icons'},
   {path: '/grid', component: GridPage, as: 'Dashboard.grid'},
 
-  {path: '/edu', component:TermList, as: 'Term.list'},
-  {path: '/edu/:term', component:TermIndex, as: 'Term.index'},
+  {path: '/edu', component: TermList, as: 'Term.list'},
+  {path: '/edu/:term', component: TermIndex, as: 'Term.index'},
 
-  {path:'/comment/:rateAndCommentableId', component: CommentIndex, as: 'Component.index'},
+  {path: '/comment/:rateAndCommentableId', component: CommentIndex, as: 'Component.index'},
 
   {path: '/course', component: CourseIndex, as: 'Course.index'},
 
-  {path: '/temp', component: Temp, as: 'Temp.index'}
+  {path: '/admin/init', component: InitComponent, as: 'Init.index'},
+
+  {path: '/temp', component: Temp, as: 'Temp.index'},
+
+  {path: '/todo', component: TodoIndex, as: 'Todo.index'},
+  {path: '/todo/list', component: TodoList, as: 'Todo.list'}
+
 ])
 export class App {
 }

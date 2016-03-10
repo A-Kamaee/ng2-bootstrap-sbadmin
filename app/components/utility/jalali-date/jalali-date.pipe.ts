@@ -7,9 +7,10 @@ import {JDate} from './jdate'
 })
 export class JalaliDatePipe implements PipeTransform {
 
-  public transform(value:Date, args:string[])
+  public transform(value:any, args:string[])
   {
-    var jdate:JDate = new JDate(value);
+    var date = new Date(value);
+    var jdate:JDate = new JDate(date);
     return jdate.format('dddd DD MMMM YYYY');
   }
 

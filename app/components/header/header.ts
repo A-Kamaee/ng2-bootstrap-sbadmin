@@ -1,10 +1,10 @@
 import {Component, ElementRef, CORE_DIRECTIVES} from 'angular2/angular2';
 import {Dropdown, DropdownMenu, DropdownToggle, Accordion, AccordionGroup, AccordionHeading} from 'ng2-bootstrap/ng2-bootstrap';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {ROUTER_DIRECTIVES, RouterLink} from 'angular2/router';
 @Component({
   selector: 'header-notification',
   templateUrl: './components/header/header-notification.html',
-  directives: [Dropdown, DropdownMenu, DropdownToggle, ROUTER_DIRECTIVES, CORE_DIRECTIVES],
+  directives: [Dropdown, DropdownMenu, DropdownToggle, ROUTER_DIRECTIVES, CORE_DIRECTIVES, RouterLink],
   viewProviders: [Dropdown, DropdownMenu, DropdownToggle, ElementRef]
 })
 export class HeaderNotification {

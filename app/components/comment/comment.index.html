@@ -7,9 +7,8 @@
           <article *ng-for="#comment of comments" class="row">
             <div class="col-md-3">
               <figure class="thumbnail">
-                <img class="img-responsive"
-                     src=""/>
-                <figcaption class="text-center">{{comment.creator}}</figcaption>
+                <img class="img-responsive" src="{{ comment.creator.imageUrl }}"/>
+                <figcaption class="text-center">{{comment.creator.name}}</figcaption>
               </figure>
             </div>
             <div class="col-md-9">

@@ -1,4 +1,4 @@
-import {Component} from 'angular2/angular2';
+import {Component, OnInit} from 'angular2/angular2';
 import {NgFor} from 'angular2/common';
 import {AfterViewInit} from 'angular2/core';
 import {RouteParams} from 'angular2/router';
@@ -6,15 +6,11 @@ import {Http, Response} from 'angular2/http';
 
 import {WrapperCmp} from '../header/header';
 
-import {JalaliDatePipe} from '../utility/jalali-date/jalali-date.pipe'
+import {JalaliDatePipe} from '../utility/jalali-date/jalali-date.pipe';
 import {PersianNumberPipe} from '../utility/persian-number/persianNumber.pipe';
 
-
-import {Comment} from './comment.model';
-import {CommentManager} from './commentManager.helper';
-import {CommentServices} from './comment.service'
 import {User} from '../auth/user.model';
-
+import {CommentService} from './comment.service';
 import {Rating} from '../ui/rating/rating';
 
 @Component({
@@ -23,21 +19,25 @@ import {Rating} from '../ui/rating/rating';
   styleUrls: ['./components/comment/comment.index.css'],
   directives: [WrapperCmp, NgFor, Rating],
   pipes: [JalaliDatePipe, PersianNumberPipe],
+  providers: [CommentService]
 })
-export class CommentIndex {
+export class CommentIndex implements OnInit {
 
-  get comments():Comment[] {
-    return this._comments;
+  private _comments:any[];
+  private _rateAndCommentable:string;
+
+  constructor(private params:RouteParams, private _service:CommentService) {
+    this._rateAndCommentable = params.get('rateAndCommentableId');
   }
 
-  private _comments:Comment[];
+  onInit() {
+    this._service._baseService.instances$.subscribe(updatedTodos => this._comments = updatedTodos);
+    this._service._baseService.load();
+    this._service.loadByRateAndCommentableId(this._rateAndCommentable);
+  }
 
-  constructor(private params:RouteParams, private service:CommentServices) {
-    console.log('comment.component started ...');
-    var rateAndCommentableId:string = params.get('rateAndCommentableId');
-    var comments:Comment[] = service.fetchComments(rateAndCommentableId);
-    this._comments = comments;
-    console.log('comment.component finished ...');
+  get comments():any[] {
+    return this._comments;
   }
 
 }

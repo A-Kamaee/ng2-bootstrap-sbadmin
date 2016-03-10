@@ -10,8 +10,10 @@ import {CourseService} from '../course/course.service';
   directives: [WrapperCmp],
 })
 export class CourseIndex {
+
   constructor()
   {
     console.log("Component Course Index called successfully ...");
   }
+
 }
