@@ -1,6 +1,9 @@
 import {Component, ElementRef, CORE_DIRECTIVES} from 'angular2/angular2';
+import {NgFor} from 'angular2/core';
 import {Dropdown, DropdownMenu, DropdownToggle, Accordion, AccordionGroup, AccordionHeading} from 'ng2-bootstrap/ng2-bootstrap';
 import {ROUTER_DIRECTIVES, RouterLink} from 'angular2/router';
+import {ViewbagComponent} from "../viewbag/viewbag.component";
+
 @Component({
   selector: 'header-notification',
   templateUrl: './components/header/header-notification.html',
@@ -35,10 +38,14 @@ export class Header {
   template: `<div id="wrapper">
       <header></header>
       <div id="page-wrapper" style="min-height: 561px;">
-        <ng-content></ng-content>
+        <div class="container-fluid">
+          <br/>
+          <viewbag></viewbag>
+          <ng-content></ng-content>
+        </div>
       </div>
     </div>`,
-  directives: [Header, CORE_DIRECTIVES]
+  directives: [Header, CORE_DIRECTIVES, ViewbagComponent]
 })
 export class WrapperCmp {
 }

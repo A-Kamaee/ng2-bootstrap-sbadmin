@@ -6,6 +6,9 @@ import {App} from './components/app/app';
 
 import {BaseService} from './components/baseServices/base.service';
 
+import {ViewbagService} from './components/viewbag/viewbag.service';
+
 bootstrap(App, [
-  ROUTER_PROVIDERS, HTTP_PROVIDERS, BaseService
+  ROUTER_PROVIDERS, HTTP_PROVIDERS, BaseService, ViewbagService
 ]);
+

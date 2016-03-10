@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+  <div class="row" *ng-if="errors.length != 0">
+    <div class="col-md-12">
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <p *ng-for="#error of errors">
+          {{error}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ng-if="warnings.length != 0">
+    <div class="col-md-12">
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <p *ng-for="#warning of warnings">
+          {{warning}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ng-if="infos.length != 0">
+    <div class="col-md-12">
+      <div class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <p *ng-for="#info of infos">
+          {{info}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ng-if="successes.length != 0">
+    <div class="col-md-12">
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <p *ng-for="#success of successes">
+          {{success}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

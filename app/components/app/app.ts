@@ -4,7 +4,7 @@ import {
   ROUTER_DIRECTIVES,
   RouteParams
 } from 'angular2/router';
-
+import {OnInit} from 'angular2/core';
 
 import {HomePage} from '../home/home';
 import {FormPage} from '../form/form';
@@ -67,4 +67,5 @@ import {InitComponent} from '../init/init.component';
 
 ])
 export class App {
+
 }
