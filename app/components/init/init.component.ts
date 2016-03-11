@@ -7,6 +7,8 @@ import {InitService} from './init.service';
 import {ExcelReader, AbstractReader} from './reader.helper';
 import {CourseService} from '../edu/course/course.service';
 
+import {CourseIndex} from '../edu/course/course.component';
+
 import {Progressbar} from '../../../node_modules/ng2-bootstrap/components/progressbar/progressbar';
 
 import {PersianNumberPipe} from '../utility/persian-number/persianNumber.pipe';
@@ -21,21 +23,24 @@ import {Level} from '../viewbag/level.enum';
   selector: 'initialize-index',
   templateUrl: './components/init/init.index.html',
   providers: [InitService, ExcelReader, CourseService],
-  directives: [Progressbar, WrapperCmp, NgIf],
+  directives: [Progressbar, WrapperCmp, NgIf, CourseIndex],
   pipes: [PersianNumberPipe],
 })
 export class InitComponent implements OnInit, Observer {
 
   private _progressPercent:number = 0;
   private _showLoading:boolean = false;
+  private _courses:ICourse[] = [];
 
-  constructor(private _service:InitService, private _reader:ExcelReader, private _viewbag:ViewbagService) {
+  constructor(private _service:InitService, private _reader:ExcelReader, private _viewbag:ViewbagService, private _courseService:CourseService) {
     this._viewbag.addObserver(this, Level.ERROR);
     this._viewbag.addObserver(this, Level.SUCCESS);
   }
 
   public onInit():void {
     this._viewbag.addInfo("به منظور دریافت اطلاعات ترم جدید از سامانه آموزش روی دکمه ی دریافت اطلاعات کلیک نمایید.بعد از آن صبر نمایید تا نوار پیشرفت به طور کامل پر شود.در نهایت اطلاعات ترم جدید در سامانه بارگذاری می گردد.");
+    this._courseService._baseService.instances$.subscribe(updatedCourses => this._courses = updatedCourses);
+    this._courseService._baseService.load();
   }
 
   private _initProgressbar():void {
@@ -48,12 +53,12 @@ export class InitComponent implements OnInit, Observer {
     }
   }
 
+  // used in template
   private btnSend_click():void {
     this._showLoading = true;
     this._initProgressbar();
     this._service.initalizeSemester(this._reader);
   }
-
 
   public notify(level:Level):void {
     console.log('init.component.ts notified for level ', level);

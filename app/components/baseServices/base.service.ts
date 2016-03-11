@@ -37,4 +37,9 @@ export class BaseService<T> {
   public get(url:string):Observable<Response> {
     return this._http.get(this._host + url);
   }
+
+  public post(url:string, params:string): Observable<Response>
+  {
+    return this._http.post(this._host + url, params);
+  }
 }

@@ -4,8 +4,6 @@ import {OnInit, OnDestroy} from 'angular2/core';
 
 import {ViewbagService} from './viewbag.service';
 
-
-
 @Component({
   selector: 'viewbag',
   templateUrl: './components/viewbag/viewbag.index.html',
@@ -34,7 +32,6 @@ export class ViewbagComponent implements OnDestroy {
   }
 
   public onDestroy():void {
-    console.log("onDestroy called ...");
     this._service.emptyErrors();
     this._service.emptyWarnings();
     this._service.emptyInfos();

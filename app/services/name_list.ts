@@ -1,5 +1,5 @@
 export class NameList {
-  names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
+  names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper', 'AbouzarKamaee'];
 
   get(): string[] {
     return this.names;

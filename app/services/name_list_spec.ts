@@ -12,5 +12,10 @@ export function main() {
       let names = nameList.get();
       expect(names).toEqual(jasmine.any(Array));
     });
+
+    it('should fail', () => {
+      expect(true).toEqual(false);
+    });
+
   });
 }

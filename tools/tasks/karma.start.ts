@@ -5,7 +5,9 @@ export = function karmaStart() {
   return function (done) {
     karma.start({
       configFile: join(process.cwd(), 'karma.conf.js'),
-      singleRun: true
-    }, done);
+      singleRun: true,
+    }, function() {
+      done();
+    });
   };
 };

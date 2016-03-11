@@ -1,8 +1,9 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {ROUTER_DIRECTIVES} from 'angular2/router'
 
 import {WrapperCmp} from '../../header/header';
 import {CourseService} from '../course/course.service';
+import {ICourse} from '../course/course.interface';
 
 @Component({
   selector: 'course-index',
@@ -10,6 +11,8 @@ import {CourseService} from '../course/course.service';
   directives: [WrapperCmp],
 })
 export class CourseIndex {
+
+  @Input() course:ICourse;
 
   constructor()
   {

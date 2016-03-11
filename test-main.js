@@ -42,6 +42,7 @@ System.import('angular2/src/core/dom/browser_adapter').then(function(browser_ada
 
 
 function onlySpecFiles(path) {
+  console.log('test path in onlySpecFiles is ', path);
   return /[\.|_]spec\.js$/.test(path);
 }
 

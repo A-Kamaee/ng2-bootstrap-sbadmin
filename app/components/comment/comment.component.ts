@@ -31,7 +31,7 @@ export class CommentIndex implements OnInit {
   }
 
   onInit() {
-    this._service._baseService.instances$.subscribe(updatedTodos => this._comments = updatedTodos);
+    this._service._baseService.instances$.subscribe(updatedComments => this._comments = updatedComments);
     this._service._baseService.load();
     this._service.loadByRateAndCommentableId(this._rateAndCommentable);
   }

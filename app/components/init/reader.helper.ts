@@ -20,7 +20,8 @@ export class ExcelReader extends AbstractReader {
 
   public read():Observable<Response> {
     console.log('read excel reader called ...');
-    return this._http.get("http://localhost:3000/init/edu/excel");
+
+    return this._http.get("http://localhost:3000/initialize");
   }
 
 }

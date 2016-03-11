@@ -10,6 +10,7 @@ import {DOM} from 'angular2/src/core/dom/dom_adapter';
 import {AuthPage} from './auth';
 
 export function main() {
+
   describe('auth component', () => {
     it('should work',
       injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {

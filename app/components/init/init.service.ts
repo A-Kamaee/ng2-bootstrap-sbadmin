@@ -3,7 +3,7 @@ import {Observable} from 'angular2/angular2';
 import {Response} from 'angular2/http';
 
 import {AbstractReader, ExcelReader} from './reader.helper';
-import {ICourse} from '../edu/course/course.interface'
+import {ICourse} from '../edu/course/course.interface';
 import {CourseService} from '../edu/course/course.service';
 import {ViewbagService} from '../viewbag/viewbag.service';
 
@@ -17,7 +17,7 @@ export class InitService {
   // اطلاعات ترم جدید را از سامانه آموزش دریافت کرده و در پایگاه داده ذخیره می کند
   public initalizeSemester(reader:AbstractReader):void {
 
-    console.log('initializeSemester called ...');
+    //console.log('initializeSemester called ...');
 
     reader.read().subscribe(
       data => {
